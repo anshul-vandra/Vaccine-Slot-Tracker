@@ -1,0 +1,20 @@
+@import "variable";
+@import "mixin";
+@import "reset";
+@import "col";
+
+// Component
+@import "component/flex";
+@import "component/form";
+@import "component/button";
+@import "component/icon";
+@import "component/progressbar";
+@import "component/tooltip";
+@import "component/header";
+@import "component/footer";
+
+// Page
+@import "pages/home";
+@import "pages/merchant_inquiry";
+
+@import "common";

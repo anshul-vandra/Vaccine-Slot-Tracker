@@ -1,0 +1,144 @@
+.form-block {
+    position: relative;
+}
+.form-label {
+    font-size: 14px;
+    color:$color1;
+    margin-bottom: 8px;
+    @extend %Roboto-Regular;
+}
+.form-control {
+	width: 100%;
+	padding: 15px 18px 14px;
+	border: 1px solid $color3;
+	background-color: $color4;
+    color: $color1;
+    font-size: 14px;
+    @extend %Roboto-Regular, .border-r5;
+}
+.form-error {
+    font-size: 14px;
+    color: $danger;
+    @extend %Roboto-Regular;
+}
+.form-check-label {
+    .checkbox {
+        width: 16px;
+        height: 16px;
+        margin-right: 10px;
+        border: 1px solid $color3;
+        cursor: pointer;
+        position: relative;
+        @extend .border-r2, %transition;
+        &::before {
+            content: "";
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            width: 8px;
+            height: 4px;
+            border-bottom: 2px solid $white;
+            border-left: 2px solid $white;
+            opacity: 0;
+            @extend %transition;
+            @include prefix(transform, translate(-50%, -75%) rotate(-45deg));
+        }
+    }
+    .checkbox-text {
+        font-size: 14px;
+        color: rgba($color1, 0.5);
+    }
+}
+.form-check {
+	width: 0;
+	height: 0;
+	opacity: 0;
+	visibility: hidden;
+	position: absolute;
+	left: 0;
+    top: 0;
+    &:checked {
+        &~ .form-check-label {
+            .checkbox {
+                background-color: $black;
+                border-color: $black;
+                &::before {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+.form-link {
+    font-size: 14px;
+    color: rgba($color1, 0.5);
+    @extend %transition;
+    &.dark {
+        color: $color1;
+    }
+    &.under-line {
+        text-decoration: underline;
+    }
+    &.hover {
+        &:hover {
+            color: $color1;
+        }
+    }
+    &.font-medium {
+        @extend %Roboto-Medium;
+    }
+    .icon {
+        margin-right: 5px;
+    }
+}
+.signup-link {
+    margin: 8px 18px;
+    &:last-child {
+        margin-right: 0;
+    }
+}
+.form-promotions {
+    margin-left: 59px;
+    width: 490px;
+    max-width: 100%;
+    .form-email {
+        -ms-flex:1;-webkit-box-flex:1;flex:1;
+    }
+    .form-control {
+        border-bottom-right-radius: 0;
+        border-top-right-radius: 0;
+        padding: 16px 18px 15px;
+    }
+}
+
+// Responsive
+@include responsive(md){
+    .form-check-label {
+        .checkbox-text {
+            font-size: 12px;
+        }
+    }
+    .form-link {
+        &.mobile-link {
+            font-size: 12px;
+        }
+    }
+}
+
+@include responsive(sm){
+    .form-promotions {
+        margin-top: 24px;
+        margin-left: 0px;
+        .form-email {
+            -ms-flex:0 0 100%;-webkit-box-flex:0 0 100%;flex:0 0 100%;
+            margin-bottom: 18px;
+        }
+        .form-control {
+            border-bottom-right-radius: 5px;
+            border-top-right-radius: 5px;
+        }
+        .btn, .form-submit {
+            min-width: 100%;
+        }
+    }
+}

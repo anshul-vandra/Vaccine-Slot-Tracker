@@ -1,0 +1,141 @@
+// Fonts Size
+h1, .h1 {
+    font-size: 50px;
+    @extend %BebasNeue-Regular;
+}
+h2 {
+    // font-size: 50px;
+}
+h3{
+    font-size: 30px;
+}
+p {
+    font-size: 16px;
+}
+
+.text-center {
+    text-align: center;
+}
+.text-right {
+    text-align: right;
+}
+.text-left {
+    text-align: left;
+}
+
+.text-success {
+    color: $success;
+}
+.text-danger {
+    color: $danger;
+}
+.text-warning {
+    color: $warning;
+}
+.text-info {
+    color: $info;
+}
+.text-minute {
+    color: $color2;
+}
+
+.position-relative {
+    position: relative;
+}
+// Font Family
+%BebasNeue-Regular {
+    font-family: 'BebasNeue-Regular';
+}
+%Roboto-Regular {
+    font-family: 'Roboto-Regular';
+}
+%Roboto-Medium {
+    font-family: 'Roboto-Medium';
+}
+%Sanfrancisco-Regular {
+    font-family: 'San-Francisco-Display-Regular';
+}
+%Sanfrancisco-Medium {
+    font-family: 'San-Francisco-Display-Medium';
+}
+%Sanfrancisco-SemiBold {
+    font-family: 'San-Francisco-Display-SemiBold';
+}
+%Sanfrancisco-Bold {
+    font-family: 'San-Francisco-Display-Bold';
+}
+%Sanfrancisco-Heavy {
+    font-family: 'San-Francisco-Display-Heavy';
+}
+
+.bg-concrete {
+    background-color: #F2F2F2;
+}
+.bg-Ceramic {
+    background-color: #FCFFF9;
+}
+// Width css
+.w-100 {
+	width: 100%;
+}
+
+.mb-20 {
+    margin-bottom: 20px;
+}
+.mb-30 {
+    margin-bottom: 30px;
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.ml-auto {
+    margin-left: auto;
+}
+.mr-auto {
+    margin-right: auto;
+}
+
+// Height SCSS
+.min-h100 {
+	min-height: 100vh;
+}
+.h-100 {
+    height: 100%;
+}
+
+.border-r5{
+    @include prefix(border-radius, 5px);
+}
+.border-r2{
+    @include prefix(border-radius, 2px);
+}
+
+
+.container {
+    width: 1290px;
+    max-width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 0 auto;
+}
+
+
+// Responsive
+@include responsive(md) {
+    // Fonts Size
+    h1 {
+        font-size: 36px;
+    }
+    .h1 {
+        font-size: 38px;
+    }
+    p {
+        font-size: 14px;
+    }
+    body {
+        font-size: 14px;
+    }
+}
+
+
